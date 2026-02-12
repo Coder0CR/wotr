@@ -36,7 +36,7 @@ wotr/
   * Confirm programmatic access
   * Write a tiny SDK script to list/create buckets and put/get an object.
   #### Build:
-  * Create scripts/s3_smoke.ts which lists buckets, uploads hello.txt, reads it back.
+  * Create scripts/s3-smoke.ts which lists buckets, uploads hello.txt, reads it back.
   #### Deliverables:
   * Tag v0.11
   * Create notes/day1.md (what worked/blocked)
