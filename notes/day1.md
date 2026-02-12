@@ -1,23 +1,40 @@
-# Day 1
+# Day 1 - Bootstrap and S3 SDK Smoke Test
 
-## Goals for Day 1
-- Set up AWS SDK for JavaScript
-- Create a script to list S3 buckets
-- Run the script and verify functionality
-- Create a script to upload a file to S3
-- Create a script to download a file from S3
-- Run the script and verify functionality
-- Create a script to delete a file from S3
-- Run the script and verify functionality
+**Date:** 2026-02-12  
+**Tag:** v0.11
 
-## Notes
-- Ensure you have the necessary AWS credentials configured for the SDK to access your AWS account.
-- Use the AWS CLI or AWS Management Console to create an S3 bucket for testing if you don't have one already.
-- Verify that the scripts are running in a Node.js environment with the AWS SDK installed.
+## ✅ Completed Objectives
 
-## Summary of Day 1
-- Successfully set up AWS SDK for JavaScript.
-- Created and ran a script to list S3 buckets, verified functionality.
-- Created and ran a script to upload a file to S3, verified functionality.
-- Created and ran a script to download a file from S3, verified functionality.
-- Created and ran a script to delete a file from S3, verified functionality.
+- [x] Configured AWS CLI profiles
+- [x] Confirmed programmatic access
+- [x] Created S3 smoke test script (`scripts/s3-smoke.ts`)
+- [x] Implemented bucket listing
+- [x] Implemented file upload (hello.txt)
+- [x] Implemented file read-back and content verification
+- [x] Implemented file deletion
+- [x] Set up CDK infrastructure foundation
+
+## 📝 What Worked
+
+- AWS SDK v3 (`@aws-sdk/client-s3`) installation and setup
+- TypeScript ES modules configuration
+- S3 operations (PutObject, GetObject, DeleteObject, ListBuckets)
+- Clean separation of concerns with helper functions
+
+## 🚧 What Was Blocked / Issues Encountered
+
+- Initial ES module vs CommonJS confusion with `require.main`
+- Missing `@types/node` dependency initially
+- CDK setup required creating proper directory structure and config files
+
+## 💡 Learnings
+
+- ES modules in TypeScript require `import.meta.url` for script detection
+- AWS SDK v3 uses command pattern for operations
+- S3 bucket naming must be globally unique
+
+## 🎯 Next Steps (Day 2)
+
+- Deploy first Lambda function
+- Create DynamoDB table with proper partition/sort keys
+- Implement least-privilege IAM policies
