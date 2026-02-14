@@ -1,3 +1,4 @@
+
 module.exports = {
   testEnvironment: 'node',
   roots: ['<rootDir>/test'],
@@ -5,5 +6,10 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
   },
-  setupFilesAfterEnv: ['aws-cdk-lib/testhelpers/jest-autoclean'],
+  collectCoverageFrom: [
+    'lib/**/*.ts',
+    '!lib/**/*.d.ts',
+  ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
 };

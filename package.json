@@ -12,6 +12,9 @@
     "cdk": "cdk --app='npx ts-node infra/cdk/bin/wotr.ts'",
     "cdk:synth": "cd infra/cdk && cdk synth",
     "cdk:deploy": "cd infra/cdk && cdk deploy",
-    "cdk:diff": "cd infra/cdk && cdk diff"
+    "cdk:diff": "cd infra/cdk && cdk diff",
+    "test": "cd infra/cdk && npm test",
+    "test:integration": "cd infra/cdk && RUN_INTEGRATION_TESTS=true npm run test:integration",
+    "test:lambda": "ts-node scripts/test-lambda.ts"
   }
 }
